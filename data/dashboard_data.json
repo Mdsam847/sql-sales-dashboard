@@ -1,0 +1,195 @@
+{
+  "headline": {
+    "total_revenue": 37491.38,
+    "total_profit": 8487.53,
+    "total_orders": 210,
+    "avg_order_value": 178.53
+  },
+  "by_region": [
+    {
+      "region": "East",
+      "revenue": 10603.69,
+      "profit": 2544.85,
+      "orders": 59
+    },
+    {
+      "region": "North",
+      "revenue": 10492.06,
+      "profit": 2384.91,
+      "orders": 56
+    },
+    {
+      "region": "South",
+      "revenue": 8785.27,
+      "profit": 1718.56,
+      "orders": 55
+    },
+    {
+      "region": "West",
+      "revenue": 7610.36,
+      "profit": 1839.21,
+      "orders": 40
+    }
+  ],
+  "monthly": [
+    {
+      "month": "2026-01",
+      "revenue": 8480.47
+    },
+    {
+      "month": "2026-02",
+      "revenue": 4812.68
+    },
+    {
+      "month": "2026-03",
+      "revenue": 3077.36
+    },
+    {
+      "month": "2026-04",
+      "revenue": 5556.15
+    },
+    {
+      "month": "2026-05",
+      "revenue": 10166.18
+    },
+    {
+      "month": "2026-06",
+      "revenue": 5398.54
+    }
+  ],
+  "top_products": [
+    {
+      "product": "Standing Desk",
+      "category": "Furniture",
+      "revenue": 12077.53,
+      "units_sold": 47
+    },
+    {
+      "product": "Bookshelf",
+      "category": "Furniture",
+      "revenue": 6355.03,
+      "units_sold": 66
+    },
+    {
+      "product": "Office Chair",
+      "category": "Furniture",
+      "revenue": 5914.96,
+      "units_sold": 43
+    },
+    {
+      "product": "Bluetooth Speaker",
+      "category": "Electronics",
+      "revenue": 2908.3,
+      "units_sold": 64
+    },
+    {
+      "product": "Webcam HD",
+      "category": "Electronics",
+      "revenue": 2545.57,
+      "units_sold": 63
+    }
+  ],
+  "by_category": [
+    {
+      "category": "Furniture",
+      "revenue": 25207.88,
+      "pct_of_total": 67.2
+    },
+    {
+      "category": "Electronics",
+      "revenue": 8723.34,
+      "pct_of_total": 23.3
+    },
+    {
+      "category": "Clothing",
+      "revenue": 2386.19,
+      "pct_of_total": 6.4
+    },
+    {
+      "category": "Office Supplies",
+      "revenue": 1173.97,
+      "pct_of_total": 3.1
+    }
+  ],
+  "by_segment": [
+    {
+      "customer_segment": "Home Office",
+      "orders": 35,
+      "avg_order_value": 249.78
+    },
+    {
+      "customer_segment": "Corporate",
+      "orders": 68,
+      "avg_order_value": 164.98
+    },
+    {
+      "customer_segment": "Consumer",
+      "orders": 107,
+      "avg_order_value": 163.84
+    }
+  ],
+  "mom_growth": [
+    {
+      "month": "2026-01",
+      "revenue": 8480.47,
+      "mom_growth_pct": null
+    },
+    {
+      "month": "2026-02",
+      "revenue": 4812.68,
+      "mom_growth_pct": -43.2
+    },
+    {
+      "month": "2026-03",
+      "revenue": 3077.36,
+      "mom_growth_pct": -36.1
+    },
+    {
+      "month": "2026-04",
+      "revenue": 5556.15,
+      "mom_growth_pct": 80.5
+    },
+    {
+      "month": "2026-05",
+      "revenue": 10166.18,
+      "mom_growth_pct": 83.0
+    },
+    {
+      "month": "2026-06",
+      "revenue": 5398.54,
+      "mom_growth_pct": -46.9
+    }
+  ],
+  "running_total": [
+    {
+      "month": "2026-01",
+      "revenue": 8480.47,
+      "cumulative_revenue": 8480.47
+    },
+    {
+      "month": "2026-02",
+      "revenue": 4812.68,
+      "cumulative_revenue": 13293.15
+    },
+    {
+      "month": "2026-03",
+      "revenue": 3077.36,
+      "cumulative_revenue": 16370.51
+    },
+    {
+      "month": "2026-04",
+      "revenue": 5556.15,
+      "cumulative_revenue": 21926.66
+    },
+    {
+      "month": "2026-05",
+      "revenue": 10166.18,
+      "cumulative_revenue": 32092.84
+    },
+    {
+      "month": "2026-06",
+      "revenue": 5398.54,
+      "cumulative_revenue": 37491.38
+    }
+  ]
+}

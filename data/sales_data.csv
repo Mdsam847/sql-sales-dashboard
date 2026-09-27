@@ -1,0 +1,211 @@
+order_id,order_date,region,category,product,customer_segment,quantity,unit_price,sales,profit
+1053,2026-01-01,South,Electronics,Bluetooth Speaker,Consumer,4,47.06,188.24,47.71
+1102,2026-01-01,East,Office Supplies,Sticky Notes,Consumer,4,3.71,14.84,3.47
+1022,2026-01-02,South,Electronics,Wireless Mouse,Corporate,2,16.75,33.5,4.25
+1154,2026-01-02,East,Electronics,Bluetooth Speaker,Home Office,5,46.13,230.65,31.21
+1159,2026-01-02,North,Electronics,Bluetooth Speaker,Consumer,2,46.9,93.8,17.23
+1082,2026-01-05,East,Electronics,Bluetooth Speaker,Consumer,4,46.38,185.52,34.76
+1098,2026-01-06,South,Clothing,Cap,Corporate,5,10.19,50.95,14.59
+1044,2026-01-07,West,Electronics,USB-C Hub,Consumer,4,33.55,134.2,41.61
+1153,2026-01-07,South,Office Supplies,Stapler,Consumer,1,5.69,5.69,1.56
+1126,2026-01-09,South,Office Supplies,Printer Paper,Consumer,1,12.79,12.79,2.45
+1112,2026-01-10,South,Electronics,Webcam HD,Corporate,3,42.37,127.11,39.7
+1196,2026-01-10,South,Electronics,Wireless Mouse,Consumer,2,19.11,38.22,7.24
+1042,2026-01-11,East,Clothing,Hoodie,Home Office,6,32.64,195.84,27.93
+1006,2026-01-12,South,Office Supplies,Stapler,Consumer,1,6.34,6.34,1.97
+1025,2026-01-14,West,Office Supplies,Notebook Pack,Consumer,1,7.88,7.88,1.53
+1039,2026-01-14,North,Electronics,Monitor Stand,Home Office,3,25.96,77.88,15.06
+1063,2026-01-17,West,Furniture,Bookshelf,Consumer,5,94.48,472.4,63.16
+1209,2026-01-17,West,Furniture,Bookshelf,Corporate,3,100.34,301.02,83.26
+1204,2026-01-18,East,Electronics,USB-C Hub,Corporate,3,31.4,94.2,23.06
+1161,2026-01-19,West,Furniture,Office Chair,Corporate,4,129.22,516.88,166.77
+1164,2026-01-21,North,Furniture,Bookshelf,Corporate,6,92.56,555.36,107.34
+1200,2026-01-21,South,Furniture,Standing Desk,Consumer,5,251.42,1257.1,179.23
+1001,2026-01-23,East,Office Supplies,Notebook Pack,Corporate,1,7.48,7.48,1.28
+1155,2026-01-24,South,Office Supplies,Printer Paper,Corporate,4,11.85,47.4,9.24
+1170,2026-01-24,East,Office Supplies,Sticky Notes,Consumer,4,4.05,16.2,5.34
+1004,2026-01-25,South,Furniture,Bookshelf,Consumer,5,91.42,457.1,59.22
+1133,2026-01-25,West,Electronics,Webcam HD,Corporate,2,39.29,78.58,15.84
+1146,2026-01-26,East,Office Supplies,Notebook Pack,Consumer,6,8.19,49.14,14.21
+1179,2026-01-26,North,Furniture,Office Chair,Consumer,6,136.34,818.04,236.08
+1087,2026-01-27,West,Clothing,Cap,Consumer,4,10.96,43.84,8.55
+1166,2026-01-27,East,Electronics,Bluetooth Speaker,Consumer,2,45.74,91.48,26.28
+1076,2026-01-28,North,Furniture,Bookshelf,Consumer,6,100.95,605.7,133.95
+1049,2026-01-30,South,Furniture,Standing Desk,Corporate,3,241.05,723.15,156.15
+1165,2026-01-30,East,Furniture,Standing Desk,Consumer,3,253.81,761.43,251.89
+1206,2026-01-30,North,Electronics,Bluetooth Speaker,Corporate,4,45.13,180.52,57.94
+1104,2026-02-01,North,Electronics,Webcam HD,Consumer,2,41.34,82.68,15.57
+1150,2026-02-01,South,Furniture,Desk Lamp,Consumer,6,20.42,122.52,22.46
+1052,2026-02-02,East,Electronics,Monitor Stand,Consumer,6,29.11,174.66,27.65
+1071,2026-02-02,North,Furniture,Office Chair,Consumer,5,150.03,750.15,166.76
+1086,2026-02-02,East,Electronics,Wireless Mouse,Corporate,5,17.4,87.0,28.51
+1138,2026-02-02,East,Office Supplies,Printer Paper,Corporate,1,12.63,12.63,3.06
+1095,2026-02-06,West,Electronics,Bluetooth Speaker,Consumer,3,45.68,137.04,41.29
+1191,2026-02-06,North,Electronics,Wireless Mouse,Corporate,5,17.58,87.9,21.58
+1003,2026-02-10,South,Office Supplies,Stapler,Consumer,3,5.67,17.01,5.62
+1013,2026-02-10,West,Office Supplies,Sticky Notes,Corporate,5,3.72,18.6,3.79
+1036,2026-02-10,East,Furniture,Bookshelf,Corporate,5,102.35,511.75,152.28
+1017,2026-02-11,West,Furniture,Office Chair,Home Office,5,136.06,680.3,84.55
+1040,2026-02-11,West,Office Supplies,Sticky Notes,Home Office,5,3.69,18.45,2.52
+1180,2026-02-11,South,Electronics,Webcam HD,Corporate,2,41.42,82.84,10.74
+1183,2026-02-11,South,Clothing,Hoodie,Home Office,3,31.56,94.68,21.37
+1199,2026-02-17,West,Furniture,Desk Lamp,Corporate,3,23.49,70.47,16.51
+1026,2026-02-18,West,Furniture,Standing Desk,Consumer,4,246.83,987.32,218.97
+1084,2026-02-19,South,Electronics,Webcam HD,Corporate,6,37.98,227.88,38.19
+1182,2026-02-19,South,Furniture,Desk Lamp,Consumer,4,22.95,91.8,26.73
+1178,2026-02-24,North,Electronics,Monitor Stand,Home Office,2,26.77,53.54,8.05
+1009,2026-02-26,South,Office Supplies,Notebook Pack,Consumer,2,8.41,16.82,5.0
+1012,2026-02-26,West,Clothing,Hoodie,Consumer,5,33.96,169.8,48.61
+1090,2026-02-27,East,Office Supplies,Sticky Notes,Consumer,4,4.26,17.04,3.16
+1105,2026-02-27,North,Clothing,Cotton T-Shirt,Home Office,4,16.07,64.28,16.87
+1129,2026-02-27,North,Clothing,Socks 3-Pack,Corporate,5,8.81,44.05,12.95
+1046,2026-02-28,West,Electronics,Bluetooth Speaker,Consumer,4,43.76,175.04,54.29
+1116,2026-02-28,North,Office Supplies,Sticky Notes,Consumer,1,4.17,4.17,1.15
+1124,2026-02-28,East,Office Supplies,Stapler,Corporate,2,6.13,12.26,3.15
+1139,2026-03-01,North,Electronics,Bluetooth Speaker,Consumer,5,41.42,207.1,63.96
+1081,2026-03-03,East,Office Supplies,Sticky Notes,Consumer,5,4.17,20.85,5.67
+1074,2026-03-04,West,Electronics,USB-C Hub,Corporate,6,32.51,195.06,28.6
+1140,2026-03-06,South,Office Supplies,Notebook Pack,Corporate,6,8.47,50.82,7.57
+1011,2026-03-09,West,Electronics,Webcam HD,Consumer,5,38.48,192.4,47.83
+1048,2026-03-09,South,Electronics,Webcam HD,Home Office,4,39.01,156.04,45.72
+1114,2026-03-09,East,Electronics,Monitor Stand,Corporate,6,26.12,156.72,30.13
+1061,2026-03-12,East,Office Supplies,Sticky Notes,Consumer,6,3.83,22.98,4.98
+1023,2026-03-13,East,Office Supplies,Printer Paper,Consumer,5,11.29,56.45,18.39
+1099,2026-03-13,North,Electronics,Webcam HD,Consumer,4,40.86,163.44,37.29
+1135,2026-03-13,West,Electronics,USB-C Hub,Consumer,2,31.71,63.42,20.87
+1152,2026-03-13,East,Office Supplies,Sticky Notes,Corporate,5,4.3,21.5,6.45
+1038,2026-03-14,South,Office Supplies,Stapler,Consumer,2,6.18,12.36,3.8
+1158,2026-03-14,South,Office Supplies,Sticky Notes,Corporate,5,4.11,20.55,2.67
+1106,2026-03-16,North,Furniture,Bookshelf,Corporate,4,100.09,400.36,134.38
+1117,2026-03-18,South,Clothing,Cotton T-Shirt,Consumer,3,15.71,47.13,8.7
+1018,2026-03-20,South,Electronics,Bluetooth Speaker,Consumer,5,48.22,241.1,33.48
+1148,2026-03-22,North,Office Supplies,Stapler,Consumer,2,6.18,12.36,2.77
+1111,2026-03-23,East,Office Supplies,Sticky Notes,Consumer,4,4.31,17.24,5.07
+1115,2026-03-23,East,Office Supplies,Sticky Notes,Home Office,5,3.7,18.5,2.5
+1177,2026-03-26,North,Clothing,Cotton T-Shirt,Consumer,6,15.41,92.46,21.44
+1198,2026-03-26,West,Electronics,USB-C Hub,Consumer,4,33.99,135.96,38.55
+1055,2026-03-27,North,Electronics,Bluetooth Speaker,Consumer,6,43.64,261.84,77.88
+1062,2026-03-27,East,Electronics,Webcam HD,Corporate,1,37.69,37.69,6.44
+1100,2026-03-27,North,Electronics,Wireless Mouse,Home Office,2,17.51,35.02,9.55
+1187,2026-03-27,East,Office Supplies,Printer Paper,Consumer,1,11.59,11.59,3.51
+1080,2026-03-29,South,Electronics,Webcam HD,Consumer,6,42.43,254.58,61.68
+1172,2026-03-29,East,Clothing,Cotton T-Shirt,Home Office,5,15.35,76.75,9.87
+1075,2026-03-30,West,Furniture,Bookshelf,Corporate,1,95.09,95.09,18.55
+1169,2026-04-01,West,Furniture,Bookshelf,Consumer,4,94.27,377.08,49.97
+1202,2026-04-01,North,Office Supplies,Sticky Notes,Corporate,3,4.09,12.27,3.61
+1007,2026-04-04,East,Electronics,USB-C Hub,Consumer,2,32.87,65.74,18.04
+1205,2026-04-05,South,Furniture,Office Chair,Consumer,5,131.88,659.4,132.36
+1186,2026-04-06,North,Electronics,Wireless Mouse,Corporate,3,17.21,51.63,9.82
+1005,2026-04-07,East,Electronics,USB-C Hub,Corporate,6,32.61,195.66,60.57
+1068,2026-04-08,North,Electronics,Monitor Stand,Home Office,3,27.27,81.81,25.65
+1107,2026-04-09,North,Electronics,Webcam HD,Corporate,5,41.58,207.9,31.19
+1032,2026-04-14,North,Electronics,Webcam HD,Corporate,2,40.51,81.02,10.43
+1203,2026-04-14,East,Furniture,Standing Desk,Consumer,1,245.14,245.14,62.18
+1043,2026-04-15,West,Clothing,Hoodie,Home Office,2,35.98,71.96,24.09
+1108,2026-04-17,North,Electronics,Webcam HD,Corporate,3,42.05,126.15,22.99
+1065,2026-04-18,North,Furniture,Standing Desk,Consumer,4,248.33,993.32,214.44
+1069,2026-04-18,West,Electronics,Wireless Mouse,Consumer,4,16.62,66.48,15.87
+1020,2026-04-19,East,Clothing,Hoodie,Consumer,6,32.98,197.88,67.07
+1058,2026-04-19,West,Electronics,Webcam HD,Consumer,4,37.12,148.48,25.96
+1121,2026-04-19,South,Office Supplies,Sticky Notes,Consumer,3,3.81,11.43,2.34
+1097,2026-04-21,West,Office Supplies,Stapler,Corporate,1,5.61,5.61,1.86
+1149,2026-04-21,East,Electronics,USB-C Hub,Consumer,2,32.29,64.58,16.08
+1160,2026-04-21,West,Electronics,Monitor Stand,Corporate,5,28.91,144.55,33.25
+1185,2026-04-22,South,Electronics,Bluetooth Speaker,Consumer,4,47.77,191.08,62.04
+1103,2026-04-24,South,Office Supplies,Printer Paper,Corporate,3,12.09,36.27,11.75
+1181,2026-04-24,West,Office Supplies,Sticky Notes,Consumer,2,4.02,8.04,1.51
+1201,2026-04-25,North,Office Supplies,Sticky Notes,Home Office,2,4.12,8.24,1.63
+1147,2026-04-26,East,Clothing,Socks 3-Pack,Consumer,3,9.47,28.41,5.9
+1208,2026-04-26,West,Electronics,Monitor Stand,Corporate,1,29.39,29.39,9.78
+1029,2026-04-27,North,Electronics,Webcam HD,Home Office,6,41.4,248.4,38.27
+1110,2026-04-27,West,Clothing,Hoodie,Consumer,6,32.58,195.48,39.93
+1113,2026-04-27,North,Electronics,Bluetooth Speaker,Corporate,4,47.67,190.68,63.57
+1130,2026-04-27,South,Furniture,Bookshelf,Corporate,5,93.19,465.95,121.37
+1137,2026-04-27,North,Electronics,Bluetooth Speaker,Consumer,6,46.0,276.0,92.08
+1059,2026-04-29,South,Office Supplies,Stapler,Home Office,4,6.11,24.44,6.8
+1096,2026-04-30,North,Office Supplies,Sticky Notes,Consumer,3,4.0,12.0,2.74
+1120,2026-04-30,East,Clothing,Hoodie,Corporate,1,33.68,33.68,6.6
+1131,2026-05-01,North,Electronics,Webcam HD,Corporate,3,42.66,127.98,21.59
+1193,2026-05-01,East,Electronics,Monitor Stand,Consumer,3,26.9,80.7,9.97
+1024,2026-05-02,South,Clothing,Hoodie,Consumer,1,31.81,31.81,6.83
+1056,2026-05-02,North,Office Supplies,Notebook Pack,Corporate,4,7.89,31.56,8.16
+1142,2026-05-02,North,Furniture,Bookshelf,Corporate,5,96.42,482.1,105.79
+1088,2026-05-03,East,Electronics,Wireless Mouse,Consumer,4,17.98,71.92,17.76
+1128,2026-05-04,South,Clothing,Cap,Consumer,6,11.65,69.9,20.76
+1028,2026-05-05,South,Furniture,Desk Lamp,Home Office,1,20.82,20.82,2.51
+1057,2026-05-07,West,Furniture,Standing Desk,Home Office,6,267.81,1606.86,508.39
+1119,2026-05-08,North,Clothing,Hoodie,Consumer,2,33.79,67.58,11.89
+1016,2026-05-09,East,Office Supplies,Notebook Pack,Consumer,6,7.74,46.44,12.1
+1151,2026-05-10,East,Electronics,Monitor Stand,Consumer,2,29.56,59.12,11.65
+1021,2026-05-13,East,Furniture,Standing Desk,Corporate,2,241.86,483.72,60.28
+1184,2026-05-13,West,Clothing,Cap,Consumer,1,11.46,11.46,2.06
+1077,2026-05-14,South,Clothing,Cap,Consumer,5,11.54,57.7,13.76
+1085,2026-05-15,South,Office Supplies,Notebook Pack,Corporate,2,7.74,15.48,3.09
+1173,2026-05-15,South,Furniture,Standing Desk,Consumer,3,254.71,764.13,139.25
+1192,2026-05-15,South,Clothing,Cotton T-Shirt,Consumer,5,15.11,75.55,22.14
+1031,2026-05-16,North,Electronics,Webcam HD,Home Office,1,42.25,42.25,5.71
+1083,2026-05-16,South,Electronics,Webcam HD,Consumer,3,39.05,117.15,25.75
+1118,2026-05-16,South,Furniture,Standing Desk,Corporate,2,246.48,492.96,125.26
+1019,2026-05-17,North,Office Supplies,Printer Paper,Home Office,6,11.95,71.7,17.28
+1035,2026-05-18,West,Electronics,USB-C Hub,Consumer,2,34.22,68.44,21.48
+1127,2026-05-19,North,Clothing,Cap,Home Office,5,11.0,55.0,9.9
+1134,2026-05-19,East,Furniture,Standing Desk,Home Office,4,266.44,1065.76,323.36
+1041,2026-05-20,North,Electronics,USB-C Hub,Consumer,5,32.27,161.35,34.62
+1197,2026-05-20,East,Furniture,Office Chair,Home Office,6,133.08,798.48,158.53
+1027,2026-05-21,West,Electronics,Webcam HD,Consumer,1,43.0,43.0,13.92
+1060,2026-05-21,East,Furniture,Standing Desk,Home Office,6,275.04,1650.24,361.43
+1101,2026-05-21,East,Electronics,Wireless Mouse,Home Office,3,17.29,51.87,7.55
+1014,2026-05-22,East,Clothing,Cotton T-Shirt,Consumer,6,15.53,93.18,25.16
+1037,2026-05-22,East,Electronics,Wireless Mouse,Consumer,2,17.32,34.64,10.94
+1092,2026-05-22,North,Electronics,Wireless Mouse,Consumer,4,17.86,71.44,17.91
+1033,2026-05-25,North,Furniture,Bookshelf,Consumer,2,97.58,195.16,36.91
+1089,2026-05-25,East,Clothing,Cotton T-Shirt,Corporate,2,14.08,28.16,8.12
+1123,2026-05-25,West,Clothing,Cotton T-Shirt,Corporate,5,15.59,77.95,23.64
+1010,2026-05-26,West,Clothing,Cap,Consumer,2,11.27,22.54,4.67
+1091,2026-05-26,North,Office Supplies,Notebook Pack,Consumer,2,8.16,16.32,2.91
+1156,2026-05-26,East,Office Supplies,Notebook Pack,Consumer,2,7.56,15.12,3.87
+1122,2026-05-27,East,Furniture,Bookshelf,Consumer,6,91.89,551.34,184.78
+1162,2026-05-27,South,Furniture,Desk Lamp,Corporate,3,20.65,61.95,7.72
+1171,2026-05-27,North,Office Supplies,Stapler,Consumer,5,5.98,29.9,4.58
+1030,2026-05-29,South,Office Supplies,Notebook Pack,Home Office,6,7.76,46.56,6.1
+1064,2026-05-30,South,Clothing,Cotton T-Shirt,Corporate,5,14.71,73.55,8.92
+1141,2026-05-31,East,Electronics,Bluetooth Speaker,Corporate,3,41.78,125.34,35.49
+1067,2026-06-01,South,Office Supplies,Notebook Pack,Consumer,1,8.18,8.18,1.23
+1078,2026-06-01,East,Electronics,Bluetooth Speaker,Corporate,1,43.41,43.41,9.51
+1174,2026-06-03,South,Electronics,USB-C Hub,Consumer,1,31.13,31.13,7.56
+1072,2026-06-05,North,Office Supplies,Notebook Pack,Consumer,2,8.59,17.18,2.47
+1189,2026-06-05,North,Furniture,Office Chair,Corporate,3,134.12,402.36,59.07
+1163,2026-06-08,South,Furniture,Bookshelf,Consumer,1,94.04,94.04,13.47
+1145,2026-06-09,South,Office Supplies,Stapler,Corporate,4,6.47,25.88,6.13
+1190,2026-06-09,South,Furniture,Office Chair,Consumer,4,142.17,568.68,70.3
+1167,2026-06-10,East,Furniture,Desk Lamp,Corporate,6,23.49,140.94,34.42
+1168,2026-06-10,East,Electronics,Monitor Stand,Corporate,1,27.86,27.86,7.21
+1008,2026-06-12,West,Electronics,Bluetooth Speaker,Corporate,2,44.73,89.46,16.05
+1000,2026-06-13,East,Electronics,USB-C Hub,Home Office,2,30.58,61.16,17.25
+1015,2026-06-14,East,Electronics,USB-C Hub,Corporate,4,30.25,121.0,14.61
+1047,2026-06-14,North,Furniture,Bookshelf,Home Office,1,89.15,89.15,29.73
+1034,2026-06-15,East,Electronics,USB-C Hub,Consumer,1,29.49,29.49,7.57
+1002,2026-06-16,West,Office Supplies,Sticky Notes,Corporate,2,3.97,7.94,1.44
+1070,2026-06-16,North,Electronics,Wireless Mouse,Consumer,1,19.29,19.29,3.16
+1176,2026-06-17,South,Office Supplies,Sticky Notes,Consumer,2,4.06,8.12,2.65
+1109,2026-06-18,East,Furniture,Standing Desk,Corporate,4,261.6,1046.4,205.02
+1125,2026-06-18,North,Office Supplies,Printer Paper,Corporate,6,11.23,67.38,17.39
+1143,2026-06-18,South,Furniture,Desk Lamp,Consumer,6,23.63,141.78,18.91
+1175,2026-06-18,West,Clothing,Hoodie,Consumer,3,31.72,95.16,25.31
+1194,2026-06-18,West,Office Supplies,Stapler,Consumer,2,5.56,11.12,2.67
+1051,2026-06-19,South,Clothing,Cap,Consumer,5,10.66,53.3,11.18
+1094,2026-06-19,North,Clothing,Hoodie,Consumer,4,31.9,127.6,21.62
+1157,2026-06-19,North,Furniture,Desk Lamp,Consumer,4,21.2,84.8,24.26
+1079,2026-06-21,North,Furniture,Office Chair,Corporate,4,147.86,591.44,94.63
+1054,2026-06-22,South,Electronics,Monitor Stand,Corporate,6,26.52,159.12,22.06
+1066,2026-06-23,East,Office Supplies,Printer Paper,Home Office,4,12.81,51.24,17.2
+1073,2026-06-23,East,Clothing,Socks 3-Pack,Home Office,4,9.64,38.56,6.31
+1050,2026-06-25,West,Office Supplies,Printer Paper,Corporate,3,11.87,35.61,11.71
+1136,2026-06-25,North,Furniture,Bookshelf,Home Office,1,93.45,93.45,15.12
+1144,2026-06-25,North,Electronics,Monitor Stand,Consumer,1,29.79,29.79,5.69
+1195,2026-06-25,East,Furniture,Desk Lamp,Home Office,6,20.88,125.28,18.75
+1045,2026-06-29,South,Electronics,Wireless Mouse,Consumer,4,17.2,68.8,20.62
+1132,2026-06-29,South,Electronics,Monitor Stand,Consumer,1,26.39,26.39,8.66
+1093,2026-06-30,East,Electronics,Monitor Stand,Corporate,1,28.84,28.84,9.32
+1188,2026-06-30,North,Furniture,Office Chair,Home Office,1,129.23,129.23,21.64
+1207,2026-06-30,North,Furniture,Bookshelf,Home Office,6,101.33,607.98,138.66

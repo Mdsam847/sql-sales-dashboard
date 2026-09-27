@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sales Performance Report — H1 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<style>
+  :root{
+    --paper:   #EDF1EE;
+    --paper-2: #E3E9E4;
+    --ink:     #142521;
+    --ink-soft:#4B5C57;
+    --rule:    #C7D0C9;
+    --rust:    #B94E2C;
+    --teal:    #1F6E5F;
+    --gold:    #A9812F;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Mono', ui-monospace, monospace;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:980px;margin:0 auto;padding:48px 28px 80px;}
+
+  h1,h2,.serif{font-family:'Fraunces', Georgia, serif;}
+
+  /* Masthead */
+  .masthead{border-bottom:2px solid var(--ink);padding-bottom:22px;margin-bottom:32px;}
+  .masthead .kicker{
+    font-size:13px;color:var(--ink-soft);letter-spacing:.02em;margin-bottom:10px;
+  }
+  .masthead h1{
+    font-size:clamp(30px,5vw,46px);font-weight:600;margin:0 0 8px;line-height:1.08;
+    max-width:14ch;
+  }
+  .masthead p{margin:0;color:var(--ink-soft);font-size:14.5px;max-width:62ch;}
+
+  /* Stat ledger row */
+  .stats{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);
+    margin-bottom:44px;
+  }
+  .stat{padding:18px 20px;border-left:1px solid var(--rule);}
+  .stat:first-child{border-left:none;}
+  .stat .label{font-size:12px;color:var(--ink-soft);text-transform:none;margin-bottom:8px;}
+  .stat .value{font-family:'Fraunces',serif;font-size:28px;font-weight:600;}
+  .stat .sub{font-size:12px;color:var(--teal);margin-top:4px;}
+  .stat .sub.neg{color:var(--rust);}
+
+  section{margin-bottom:52px;}
+  .section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px;border-bottom:1px solid var(--rule);padding-bottom:8px;}
+  .section-head h2{font-size:20px;font-weight:600;margin:0;}
+  .section-head .note{font-size:12px;color:var(--ink-soft);}
+
+  .grid-2{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;}
+  @media (max-width:760px){ .grid-2{grid-template-columns:1fr;} .stats{grid-template-columns:1fr 1fr;} .stat:nth-child(3){border-left:none;} }
+
+  .chart-box{position:relative;height:260px;}
+
+  /* Category bar list */
+  .catlist{display:flex;flex-direction:column;gap:14px;}
+  .catrow .catrow-top{display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px;}
+  .catrow .bar-track{height:8px;background:var(--paper-2);border:1px solid var(--rule);}
+  .catrow .bar-fill{height:100%;background:var(--teal);}
+
+  /* Tables */
+  table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  th{
+    text-align:left;font-weight:600;font-size:11.5px;color:var(--ink-soft);
+    text-transform:none;border-bottom:1px solid var(--ink);padding:0 10px 8px;
+  }
+  th.num, td.num{text-align:right;}
+  td{padding:9px 10px;border-bottom:1px solid var(--rule);}
+  tr:last-child td{border-bottom:1px solid var(--ink);}
+  td.delta-pos{color:var(--teal);}
+  td.delta-neg{color:var(--rust);}
+
+  footer{border-top:2px solid var(--ink);padding-top:18px;font-size:12px;color:var(--ink-soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  footer a{color:var(--ink-soft);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="kicker">Internal Report · Retail Sales · Jan – Jun 2026</div>
+    <h1>Sales Performance, First Half 2026</h1>
+    <p>Built end-to-end from a SQLite orders table: revenue and profit are aggregated in SQL (window functions included), then rendered here as a report a stakeholder can skim in under a minute.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="label">Total revenue</div>
+      <div class="value" id="stat-revenue">–</div>
+    </div>
+    <div class="stat">
+      <div class="label">Total profit</div>
+      <div class="value" id="stat-profit">–</div>
+    </div>
+    <div class="stat">
+      <div class="label">Orders</div>
+      <div class="value" id="stat-orders">–</div>
+    </div>
+    <div class="stat">
+      <div class="label">Avg. order value</div>
+      <div class="value" id="stat-aov">–</div>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-head">
+      <h2>Monthly revenue &amp; cumulative total</h2>
+      <span class="note">SQL: GROUP BY month + SUM() OVER (ORDER BY month)</span>
+    </div>
+    <div class="chart-box"><canvas id="chart-monthly"></canvas></div>
+  </section>
+
+  <section class="grid-2">
+    <div>
+      <div class="section-head">
+        <h2>Revenue by region</h2>
+        <span class="note">GROUP BY region</span>
+      </div>
+      <div class="chart-box"><canvas id="chart-region"></canvas></div>
+    </div>
+    <div>
+      <div class="section-head">
+        <h2>Revenue share by category</h2>
+        <span class="note">% of total</span>
+      </div>
+      <div class="catlist" id="catlist"></div>
+    </div>
+  </section>
+
+  <section class="grid-2">
+    <div>
+      <div class="section-head">
+        <h2>Top 5 products</h2>
+        <span class="note">ORDER BY revenue DESC LIMIT 5</span>
+      </div>
+      <table>
+        <thead><tr><th>Product</th><th>Category</th><th class="num">Units</th><th class="num">Revenue</th></tr></thead>
+        <tbody id="top-products"></tbody>
+      </table>
+    </div>
+    <div>
+      <div class="section-head">
+        <h2>Avg. order value by segment</h2>
+        <span class="note">GROUP BY customer_segment</span>
+      </div>
+      <table>
+        <thead><tr><th>Segment</th><th class="num">Orders</th><th class="num">AOV</th></tr></thead>
+        <tbody id="by-segment"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Month-over-month growth</h2>
+      <span class="note">SQL: LAG(revenue) OVER (ORDER BY month)</span>
+    </div>
+    <table>
+      <thead><tr><th>Month</th><th class="num">Revenue</th><th class="num">MoM change</th></tr></thead>
+      <tbody id="mom-table"></tbody>
+    </table>
+  </section>
+
+  <footer>
+    <span>Data: synthetic, generated for demo purposes · Schema &amp; queries in <code>/sql</code></span>
+    <span>SQLite · Chart.js</span>
+  </footer>
+
+</div>
+
+<script>
+const DATA = {"headline": {"total_revenue": 37491.38, "total_profit": 8487.53, "total_orders": 210, "avg_order_value": 178.53}, "by_region": [{"region": "East", "revenue": 10603.69, "profit": 2544.85, "orders": 59}, {"region": "North", "revenue": 10492.06, "profit": 2384.91, "orders": 56}, {"region": "South", "revenue": 8785.27, "profit": 1718.56, "orders": 55}, {"region": "West", "revenue": 7610.36, "profit": 1839.21, "orders": 40}], "monthly": [{"month": "2026-01", "revenue": 8480.47}, {"month": "2026-02", "revenue": 4812.68}, {"month": "2026-03", "revenue": 3077.36}, {"month": "2026-04", "revenue": 5556.15}, {"month": "2026-05", "revenue": 10166.18}, {"month": "2026-06", "revenue": 5398.54}], "top_products": [{"product": "Standing Desk", "category": "Furniture", "revenue": 12077.53, "units_sold": 47}, {"product": "Bookshelf", "category": "Furniture", "revenue": 6355.03, "units_sold": 66}, {"product": "Office Chair", "category": "Furniture", "revenue": 5914.96, "units_sold": 43}, {"product": "Bluetooth Speaker", "category": "Electronics", "revenue": 2908.3, "units_sold": 64}, {"product": "Webcam HD", "category": "Electronics", "revenue": 2545.57, "units_sold": 63}], "by_category": [{"category": "Furniture", "revenue": 25207.88, "pct_of_total": 67.2}, {"category": "Electronics", "revenue": 8723.34, "pct_of_total": 23.3}, {"category": "Clothing", "revenue": 2386.19, "pct_of_total": 6.4}, {"category": "Office Supplies", "revenue": 1173.97, "pct_of_total": 3.1}], "by_segment": [{"customer_segment": "Home Office", "orders": 35, "avg_order_value": 249.78}, {"customer_segment": "Corporate", "orders": 68, "avg_order_value": 164.98}, {"customer_segment": "Consumer", "orders": 107, "avg_order_value": 163.84}], "mom_growth": [{"month": "2026-01", "revenue": 8480.47, "mom_growth_pct": null}, {"month": "2026-02", "revenue": 4812.68, "mom_growth_pct": -43.2}, {"month": "2026-03", "revenue": 3077.36, "mom_growth_pct": -36.1}, {"month": "2026-04", "revenue": 5556.15, "mom_growth_pct": 80.5}, {"month": "2026-05", "revenue": 10166.18, "mom_growth_pct": 83.0}, {"month": "2026-06", "revenue": 5398.54, "mom_growth_pct": -46.9}], "running_total": [{"month": "2026-01", "revenue": 8480.47, "cumulative_revenue": 8480.47}, {"month": "2026-02", "revenue": 4812.68, "cumulative_revenue": 13293.15}, {"month": "2026-03", "revenue": 3077.36, "cumulative_revenue": 16370.51}, {"month": "2026-04", "revenue": 5556.15, "cumulative_revenue": 21926.66}, {"month": "2026-05", "revenue": 10166.18, "cumulative_revenue": 32092.84}, {"month": "2026-06", "revenue": 5398.54, "cumulative_revenue": 37491.38}]};
+
+const fmtUSD = n => '$' + Number(n).toLocaleString('en-US', {maximumFractionDigits:0});
+const fmtUSD2 = n => '$' + Number(n).toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+const monthLabel = m => new Date(m + '-02').toLocaleDateString('en-US', {month:'short'});
+
+// Headline stats
+document.getElementById('stat-revenue').textContent = fmtUSD(DATA.headline.total_revenue);
+document.getElementById('stat-profit').textContent  = fmtUSD(DATA.headline.total_profit);
+document.getElementById('stat-orders').textContent  = DATA.headline.total_orders;
+document.getElementById('stat-aov').textContent     = fmtUSD2(DATA.headline.avg_order_value);
+
+// Monthly combo chart: bars = monthly revenue, line = cumulative
+new Chart(document.getElementById('chart-monthly'), {
+  data: {
+    labels: DATA.monthly.map(r => monthLabel(r.month)),
+    datasets: [
+      {
+        type: 'bar',
+        label: 'Monthly revenue',
+        data: DATA.monthly.map(r => r.revenue),
+        backgroundColor: '#1F6E5F',
+        borderRadius: 2,
+        order: 2
+      },
+      {
+        type: 'line',
+        label: 'Cumulative revenue',
+        data: DATA.running_total.map(r => r.cumulative_revenue),
+        borderColor: '#B94E2C',
+        backgroundColor: '#B94E2C',
+        tension: 0.25,
+        pointRadius: 3,
+        borderWidth: 2,
+        order: 1,
+        yAxisID: 'y1'
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    interaction: {mode: 'index', intersect: false},
+    plugins: {
+      legend: {labels: {font: {family: "'IBM Plex Mono'", size: 11}, color: '#4B5C57'}},
+      tooltip: {callbacks: {label: c => `${c.dataset.label}: ${fmtUSD(c.parsed.y)}`}}
+    },
+    scales: {
+      x: {grid:{display:false}, ticks:{font:{family:"'IBM Plex Mono'", size:11}, color:'#4B5C57'}},
+      y: {grid:{color:'#C7D0C9'}, ticks:{font:{family:"'IBM Plex Mono'", size:11}, color:'#4B5C57', callback:v=>fmtUSD(v)}},
+      y1:{position:'right', grid:{display:false}, ticks:{font:{family:"'IBM Plex Mono'", size:11}, color:'#4B5C57', callback:v=>fmtUSD(v)}}
+    }
+  }
+});
+
+// Region bar chart (horizontal)
+new Chart(document.getElementById('chart-region'), {
+  type: 'bar',
+  data: {
+    labels: DATA.by_region.map(r => r.region),
+    datasets: [{
+      label: 'Revenue',
+      data: DATA.by_region.map(r => r.revenue),
+      backgroundColor: '#A9812F',
+      borderRadius: 2
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: {display:false},
+      tooltip: {callbacks: {label: c => fmtUSD(c.parsed.x)}}
+    },
+    scales: {
+      x: {grid:{color:'#C7D0C9'}, ticks:{font:{family:"'IBM Plex Mono'", size:11}, color:'#4B5C57', callback:v=>fmtUSD(v)}},
+      y: {grid:{display:false}, ticks:{font:{family:"'IBM Plex Mono'", size:12}, color:'#142521'}}
+    }
+  }
+});
+
+// Category share bar list
+const catlist = document.getElementById('catlist');
+DATA.by_category.forEach(c => {
+  const row = document.createElement('div');
+  row.className = 'catrow';
+  row.innerHTML = `
+    <div class="catrow-top"><span>${c.category}</span><span>${c.pct_of_total}% · ${fmtUSD(c.revenue)}</span></div>
+    <div class="bar-track"><div class="bar-fill" style="width:${c.pct_of_total}%"></div></div>`;
+  catlist.appendChild(row);
+});
+
+// Top products table
+const tp = document.getElementById('top-products');
+DATA.top_products.forEach(p => {
+  const tr = document.createElement('tr');
+  tr.innerHTML = `<td>${p.product}</td><td>${p.category}</td><td class="num">${p.units_sold}</td><td class="num">${fmtUSD(p.revenue)}</td>`;
+  tp.appendChild(tr);
+});
+
+// Segment table
+const seg = document.getElementById('by-segment');
+DATA.by_segment.forEach(s => {
+  const tr = document.createElement('tr');
+  tr.innerHTML = `<td>${s.customer_segment}</td><td class="num">${s.orders}</td><td class="num">${fmtUSD2(s.avg_order_value)}</td>`;
+  seg.appendChild(tr);
+});
+
+// MoM table
+const mom = document.getElementById('mom-table');
+DATA.mom_growth.forEach(m => {
+  const tr = document.createElement('tr');
+  let deltaCell = '—';
+  if (m.mom_growth_pct !== null) {
+    const cls = m.mom_growth_pct >= 0 ? 'delta-pos' : 'delta-neg';
+    const sign = m.mom_growth_pct >= 0 ? '+' : '';
+    deltaCell = `<td class="num ${cls}">${sign}${m.mom_growth_pct}%</td>`;
+  } else {
+    deltaCell = `<td class="num">—</td>`;
+  }
+  tr.innerHTML = `<td>${monthLabel(m.month)} 2026</td><td class="num">${fmtUSD(m.revenue)}</td>${deltaCell}`;
+  mom.appendChild(tr);
+});
+</script>
+</body>
+</html>
