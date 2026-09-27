@@ -2,7 +2,7 @@
 
 A small end-to-end reporting project: raw order data → SQL aggregation (including window functions) → a static HTML dashboard, built to practice the SQL-for-reporting workflow.
 
-**[View the live dashboard →](dashboard.html)** *(once pushed, enable GitHub Pages on this repo and link the live URL here instead)*
+**[View the live dashboard →](https://github.com/Mdsam847/sql-sales-dashboard)** *(once pushed, enable GitHub Pages on this repo and link the live URL here instead)*
 
 ## What this shows
 
